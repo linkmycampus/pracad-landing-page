@@ -1,0 +1,146 @@
+.header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 50;
+  height: var(--nav-h);
+  transition: background-color 0.3s var(--ease), border-color 0.3s var(--ease),
+    color 0.3s var(--ease);
+  color: var(--white);
+  border-bottom: 1px solid transparent;
+}
+
+.header.scrolled {
+  background: rgba(240, 243, 242, 0.92);
+  backdrop-filter: blur(12px);
+  color: var(--ink);
+  border-bottom-color: transparent;
+  box-shadow: 0 1px 0 rgba(11, 31, 42, 0.06);
+}
+
+.inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+  margin-right: auto;
+}
+
+.logoMark {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.logoSub {
+  font-family: var(--font-display);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.72;
+}
+
+.desktopNav {
+  display: none;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.navLink {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  opacity: 0.88;
+  transition: opacity 0.2s var(--ease);
+}
+
+.navLink:hover {
+  opacity: 1;
+}
+
+.desktopCta {
+  display: none;
+}
+
+.menuBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  color: inherit;
+}
+
+.mobileOverlay {
+  position: fixed;
+  inset: var(--nav-h) 0 0;
+  background: var(--ink);
+  color: var(--white);
+  padding: 2rem 1.25rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(-2%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s var(--ease), transform 0.3s var(--ease),
+    visibility 0.3s var(--ease);
+}
+
+.mobileOpen {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.mobileLink {
+  display: block;
+  padding: 0.85rem 0;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 8vw, 2.75rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.mobileCta {
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .desktopNav {
+    display: flex;
+  }
+
+  .desktopCta {
+    display: inline-flex;
+  }
+
+  .menuBtn,
+  .mobileOverlay {
+    display: none;
+  }
+
+  .header:not(.scrolled) .desktopCta {
+    background: var(--white);
+    color: var(--ink);
+  }
+
+  .header:not(.scrolled) .desktopCta:hover {
+    background: var(--paper);
+  }
+}

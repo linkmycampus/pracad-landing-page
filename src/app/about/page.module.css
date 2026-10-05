@@ -1,0 +1,98 @@
+.vm {
+  background: var(--white);
+}
+
+.vmGrid {
+  display: grid;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .vmGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+}
+
+.ecoGrid {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.ecoBlock {
+  padding-top: 0;
+}
+
+.ecoBlock p {
+  margin-top: 0.75rem;
+  color: var(--mute);
+  max-width: 28rem;
+}
+
+@media (min-width: 768px) {
+  .ecoGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}
+
+.innovate {
+  background: var(--white);
+}
+
+.innovateList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.innovateList li {
+  font-family: var(--font-display);
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.values {
+  display: grid;
+  gap: 2rem;
+}
+
+.value p {
+  margin-top: 0.5rem;
+  color: var(--mute);
+  max-width: 22rem;
+}
+
+@media (min-width: 768px) {
+  .values {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .values {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.cta {
+  background: var(--ink);
+  color: var(--white);
+}
+
+.ctaInner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+@media (min-width: 768px) {
+  .ctaInner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

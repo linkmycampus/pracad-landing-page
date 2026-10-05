@@ -1,0 +1,38 @@
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.stage p {
+  margin-top: 0.75rem;
+  color: var(--mute);
+  max-width: 32rem;
+  font-size: 1.125rem;
+}
+
+@media (min-width: 768px) {
+  .timeline {
+    gap: 3.25rem;
+  }
+}
+
+.cta {
+  background: var(--ink);
+  color: var(--white);
+}
+
+.ctaInner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+@media (min-width: 768px) {
+  .ctaInner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

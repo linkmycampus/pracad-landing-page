@@ -1,0 +1,14 @@
+# Local agent context (PRACAD site specs — do not push)
+context/
+
+# Brand source docs kept local unless intentionally committed
+*.pdf
+.DS_Store
+Thumbs.db
+node_modules/
+dist/
+.env
+.env.*
+.next/
+out/
+*.tsbuildinfo

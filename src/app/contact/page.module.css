@@ -1,0 +1,91 @@
+.layout {
+  display: grid;
+  gap: 3.5rem;
+}
+
+@media (min-width: 1024px) {
+  .layout {
+    grid-template-columns: minmax(0, 560px) 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.field label {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.7rem 0.85rem;
+  background: var(--white);
+  border: 1px solid var(--steel);
+  border-radius: var(--radius-sm);
+  transition: border-color 0.2s var(--ease);
+}
+
+.field textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--ink);
+}
+
+.form .btn {
+  align-self: flex-start;
+  min-width: 10rem;
+}
+
+@media (max-width: 767px) {
+  .form .btn {
+    width: 100%;
+  }
+}
+
+.thanks {
+  padding: 2rem;
+  background: var(--white);
+  border: 1px solid var(--steel);
+  border-radius: var(--radius-md);
+  max-width: 32rem;
+}
+
+.thanks p {
+  margin-top: 0.75rem;
+  color: var(--mute);
+}
+
+.aside {
+  max-width: 26rem;
+}
+
+.aside p {
+  color: var(--mute);
+  line-height: 1.65;
+}
+
+.asideNote {
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+}
