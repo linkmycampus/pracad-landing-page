@@ -1,7 +1,7 @@
 .hero {
   position: relative;
-  min-height: 100vh;
-  min-height: 100dvh;
+  min-height: 72vh;
+  min-height: 72dvh;
   display: flex;
   align-items: flex-end;
   color: var(--white);
@@ -23,7 +23,7 @@
   z-index: 1;
   width: var(--container);
   margin-inline: auto;
-  padding-block: calc(var(--nav-h) + 3rem) 4.5rem;
+  padding-block: calc(var(--nav-h) + 2.5rem) 3.25rem;
 }
 
 .heroTitle {
